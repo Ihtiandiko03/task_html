@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <style type="text/css">
+    body{
+      background-image: url("https://p4.wallpaperbetter.com/wallpaper/922/821/102/purple-is-my-color-wallpaper-preview.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .kotakluar{
+        margin: 100px 300px 60px 300px;
+        padding: 30px;
+        background-color: ghostwhite;
+        border-radius: 20px;
+    }
+
+    h1{
+        text-align: center;
+        font-family: montserrat;
+        font-size: 2em;
+        font-style: italic;
+        font-variant: small-caps;
+    }
+
+    #judul{
+        text-align: center;
+        font-family: montserrat;
+        font-size: 2em;
+        font-style: italic;
+        font-variant: small-caps;
+    }
+
+    table{
+      font-family: montserrat;
+    }
+  </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <div class="kotakluar">
+        <h1>FORM</h1><br>
+        <form action="detail.html" method="get">
+
+            <div class="form-floating mb-3">
+              <input type="text" name="namadepan" class="form-control" id="namadepan" placeholder="Nama Depan" required>
+              <label for="namadepan">Nama Depan</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="text" name="namabelakang" class="form-control" id="namabelakang" placeholder="Nama Belakang" required>
+              <label for="namabelakang">Nama Belakang</label>
+            </div>
+
+            <label>Tanggal Lahir : <input type="date" name="date" id="date" required></label><br><br>
+
+            <label>Jenis Kelamin</label>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="Laki-Laki">
+                      <label class="form-check-label" for="jeniskelamin">
+                        Laki-Laki
+                      </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="Perempuan">
+                      <label class="form-check-label" for="jeniskelamin">
+                        Perempuan
+                      </label>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="alamat" rows="3" placeholder="Alamat" name="alamat" required></textarea>
+              <label for="alamat" class="form-label">Alamat</label>
+            </div>
+
+            <select class="form-select" aria-label="Default select example" name="pendidikan" required>
+              <option selected>Pendidikan Terakhir</option>
+              <option value="Tidak Sekolah">Tidak Sekolah</option>
+              <option value="Sekolah Dasar">Sekolah Dasar</option>
+              <option value="Sekolah Menengah Pertama">Sekolah Menengah Pertama</option>
+              <option value="Sekolah Menengah Atas">Sekolah Menengah Atas</option>
+              <option value="Strata 1">Strata 1</option>
+              <option value="Strata 2">Strata 2</option>
+              <option value="Strata 3">Strata 3</option>
+            </select><br>
+
+            <label>Minat Bidang Keilmuan</label>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Artificial Intellegent" id="minat" name="minat">
+              <label class="form-check-label" for="minat">
+                Artificial Intellegent
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Data Engineering" id="minat" name="minat" >
+              <label class="form-check-label" for="minat">
+                Data Engineering
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Keamanan Siber dan Pervasif" id="minat" name="minat" >
+              <label class="form-check-label" for="minat">
+                Keamanan Siber dan Pervasif
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Rekayasa Perangkat Lunak" id="minat" name="minat" >
+              <label class="form-check-label" for="minat">
+                Rekayasa Perangkat Lunak
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Sistem Informasi" id="minat" name="minat">
+              <label class="form-check-label" for="minat">
+                Sistem Informasi
+              </label>
+            </div><br>
+
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </form>
+    </div>
+    <br>
+
+    <div class="kotakluar">
+      <div id="judul"></div>
+      <table class="table table-success table-striped">
+      <tr>
+        <th scope="col">Nama Depan</th> 
+        <th scope="col">Nama Belakang</th>
+        <th scope="col">Tanggal Lahir</th>
+        <th scope="col">Jenis Kelamin</th>
+        <th scope="col">Alamat</th>
+        <th scope="col">Pendidikan Terakhir</th>
+        <th scope="col">Minat</th>        
+        
+
+      </tr>
+
+      <tr>
+        <td>Ihtiandiko</td>
+        <td>Wicaksono</td>
+        <td>03/09/2001</td>
+        <td>Laki-Laki</td>
+        <td>Kompleks Serumpun Indah Blok C2 No.26</td>
+        <td>Sekolah Menengah Atas</td>
+        <td>Sistem Informasi</td>
+      </tr>
+      
+      <tr>
+        <td>Heksa</td>
+        <td>Dananjaya</td>
+        <td>31/12/2000</td>
+        <td>Perempuan</td>
+        <td>Desa Banjarrejo, Lampung Timur</td>
+        <td>Sekolah Menengah Atas</td>
+        <td>Artificial Intellegent, Sistem Informasi</td>
+      </tr>
+
+      <tr>
+        <td>Hafizh</td>
+        <td>Londata</td>
+        <td>15/09/2001</td>
+        <td>Laki-Laki</td>
+        <td>Pringsewu</td>
+        <td>Strata 3</td>
+        <td>Artificial Intellegent, Rekayasa Perangkat Lunak, Sistem Informasi</td>
+      </tr>
+
+      <tr>
+        <td>Gilang</td>
+        <td>Rizky Ramadhan</td>
+        <td>13/05/2000</td>
+        <td>Laki-Laki</td>
+        <td>Metro</td>
+        <td>Strata 2</td>
+        <td>Keamanan Siber dan Pervasif</td>
+      </tr>
+  </table>
+    </div>
+</body>
+</html>
